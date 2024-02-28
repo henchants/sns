@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: auto;
+  padding: auto;
+  background-image: url("imgs/sns1.jpg") ;
+  background-position: center;
+}
+
+.snslogo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/** title ng sns **/
+h1{
+  text-align: center;
+  text-shadow: 2px 2px #1b1b32;
+  }
+
+
+#description{
+  text-align: center;
+  text-shadow: 2px 2px #1b1b32;
+}
+
+#survey-form {
+  background-color: #1b1b32;
+  max-width: 1200px;
+  margin: auto auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 #fff;
+}
+
+#dropdown{
+  width: 100%;
+}
+
+label{
+  color: #f5f6f7;
+}
+.thick, h1, p {
+  font-weight: bold;
+  color: #f5f6f7;
+}
