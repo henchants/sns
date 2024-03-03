@@ -18,6 +18,14 @@ h1{
   text-shadow: 2px 2px #1b1b32;
   }
 
+h5, a{
+  color:#fff;
+  }
+
+a:hover{
+  color:red;
+  text-decoration: none;
+}
 
 #description{
   text-align: center;
@@ -62,18 +70,5 @@ h1{
   margin: auto auto;
   margin-bottom: 50px;
   padding: 20px;
-  
   box-shadow: 0 0 15px 0 #fff;
-}
-
-#dropdown{
-  width: 100%;
-}
-
-label{
-  color: #f5f6f7;
-}
-.thick, h1, p {
-  font-weight: bold;
-  color: #f5f6f7;
 }
