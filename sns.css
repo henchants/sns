@@ -13,9 +13,9 @@ body {
   margin-right: auto;
 }
 /** title ng sns **/
-h1{
+#title, #description{
   text-align: center;
-  text-shadow: 2px 2px #1b1b32;
+  text-shadow: 2px 2px #fff;
   }
 
 h5, a{
@@ -25,11 +25,6 @@ h5, a{
 a:hover{
   color:red;
   text-decoration: none;
-}
-
-#description{
-  text-align: center;
-  text-shadow: 2px 2px #1b1b32;
 }
 
 #categories {
