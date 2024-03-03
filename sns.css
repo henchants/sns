@@ -8,6 +8,7 @@ body {
 
 .snslogo{
   display: block;
+  margin-top:50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -23,13 +24,45 @@ h1{
   text-shadow: 2px 2px #1b1b32;
 }
 
-#survey-form {
+#categories {
   background-color: #1b1b32;
   max-width: 1200px;
   margin: auto auto;
   margin-bottom: 50px;
   padding: 20px;
   border-radius: 5px;
+  box-shadow: 0 0 15px 0 #fff;
+}
+/**for flex**/
+#twoCat{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+/**category of landing page**/
+#shoes {
+  background-color: #fff;
+  max-width: 350px;
+  margin: auto auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  
+  box-shadow: 0 0 15px 0 #fff;
+}
+/**category of landing page**/
+#haircut {
+  background-color: #fff;
+  max-width: 350px;
+  margin: auto auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  
   box-shadow: 0 0 15px 0 #fff;
 }
 
