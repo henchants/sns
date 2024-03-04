@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: auto;
+    background-image: url("imgs/sns1.jpg") ;
+    background-position: center;
+  }
+  
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  
+  .snslogo{
+    display: block;
+    margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /** title ng sns **/
+  #title{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 5px 5px 15px #fff;
+    }
+  
+  h5, a{
+    color:#fff;
+    }
+  
+  a:hover{
+    color:red;
+    text-decoration: none;
+  }
+  
+  #shoesCat {
+    background-color: #1b1b32;
+    max-width: 1200px;
+    margin: auto auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 #fff;
+  }
+  
+  /**for flex**/
+  #twoCat{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  /**category of landing page**/
+  #shoes {
+    background-color: #fff;
+    max-width: 350px;
+    margin: auto auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 0 0 15px 0 #fff;
+  }
+  
+  /**category of landing page**/
+  #haircut {
+    background-color: #fff;
+    max-width: 350px;
+    margin: auto auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 0 0 15px 0 #fff;
+  }
