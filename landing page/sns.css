@@ -22,12 +22,12 @@ body {
   margin-right: auto;
 }
 /** title ng sns **/
-#title, #description{
+#title{
+  font-size: 50px;
   font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
-  text-shadow: 0px 0px 25px #fff;
-  text-decoration: underline;
+  text-shadow: 5px 5px 15px #fff;
   }
 
 h5, a{
@@ -48,6 +48,7 @@ a:hover{
   border-radius: 5px;
   box-shadow: 0 0 15px 0 #fff;
 }
+
 /**for flex**/
 #twoCat{
   display: flex;
@@ -60,6 +61,7 @@ a:hover{
   margin: 0 auto;
   padding: 20px 10px;
 }
+
 /**category of landing page**/
 #shoes {
   background-color: #fff;
@@ -67,9 +69,9 @@ a:hover{
   margin: auto auto;
   margin-bottom: 50px;
   padding: 20px;
-  
   box-shadow: 0 0 15px 0 #fff;
 }
+
 /**category of landing page**/
 #haircut {
   background-color: #fff;
