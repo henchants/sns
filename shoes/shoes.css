@@ -4,6 +4,9 @@ body {
     padding: auto;
     background-image: url("imgs/sns1.jpg") ;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
   
   .header {
@@ -33,10 +36,9 @@ body {
   h5, a{
     color:#fff;
     }
-  
-  a:hover{
-    color:red;
-    text-decoration: none;
+  .shoePic{
+    width: 300px;
+    height: auto;
   }
   
   #shoesCat {
@@ -47,6 +49,18 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 15px 0 #fff;
+  }
+
+  .shoesflex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
   }
   
   /**for flex**/

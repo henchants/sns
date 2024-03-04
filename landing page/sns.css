@@ -4,6 +4,9 @@ body {
   padding: auto;
   background-image: url("imgs/sns1.jpg") ;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {
