@@ -30,11 +30,7 @@ body {
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    text-shadow: 5px 5px 15px #fff;
-    }
-  
-  h5, a{
-    color:#fff;
+    text-shadow: 5px 5px 15px #fff, 5px 5px 15px #fff, 5px 5px 15px #fff;
     }
 
   .barberPic{
@@ -69,17 +65,4 @@ body {
     text-align: center;
     color:#fff;
     font-weight: bold;
-  }
-  
-  /**for flex**/
-  #twoCat{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 10px;
   }

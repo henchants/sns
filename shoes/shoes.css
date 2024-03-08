@@ -30,12 +30,9 @@ body {
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    text-shadow: 5px 5px 15px #fff;
+    text-shadow: 5px 5px 15px #fff, 5px 5px 15px #fff, 5px 5px 15px #fff;
     }
-  
-  h5, a{
-    color:#fff;
-    }
+
   .shoePic{
     width: 300px;
     height: auto;
