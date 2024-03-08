@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: auto;
     padding: auto;
-    background-image: url("imgs/sns1.jpg") ;
+    background-image: url("sns1.jpg") ;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -36,12 +36,13 @@ body {
   h5, a{
     color:#fff;
     }
-  .shoePic{
+
+  .barberPic{
     width: 300px;
     height: auto;
   }
   
-  #shoesCat {
+  #barberCat {
     background-color: #1b1b32;
     max-width: 1200px;
     margin: auto auto;
@@ -51,7 +52,7 @@ body {
     box-shadow: 0 0 15px 0 #fff;
   }
 
-  .shoesflex{
+  .barberflex{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,7 +64,7 @@ body {
     padding: 20px 10px;
   }
 
-  .shoename {
+  .haircutname {
     position: absolute;
     text-align: center;
     color:#fff;
@@ -81,24 +82,4 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 10px;
-  }
-  
-  /**category of landing page**/
-  #shoes {
-    background-color: #fff;
-    max-width: 350px;
-    margin: auto auto;
-    margin-bottom: 50px;
-    padding: 20px;
-    box-shadow: 0 0 15px 0 #fff;
-  }
-  
-  /**category of landing page**/
-  #haircut {
-    background-color: #fff;
-    max-width: 350px;
-    margin: auto auto;
-    margin-bottom: 50px;
-    padding: 20px;
-    box-shadow: 0 0 15px 0 #fff;
   }
