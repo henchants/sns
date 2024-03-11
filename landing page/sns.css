@@ -27,21 +27,6 @@ header .logo {
   font-weight: bold;
   
 }
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
 .greetings {
   background-image: url(imgs/sns1.jpg);
   background-size: cover;
@@ -56,17 +41,21 @@ nav ul li a {
   text-shadow: 5px 5px 15px #111, 5px 5px 15px #111;
 }
 
-.hero h1 {
+.greetings h1 {
   font-size: 48px;
   margin-bottom: 20px;
 }
 
-.two-categ {
+.categ-flex {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  
-  margin-top: 20px;
+  align-items: center;
+  gap: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
 }
 
 .product {
