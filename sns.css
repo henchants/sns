@@ -16,7 +16,7 @@ body {
 
 button{
   padding: 0;
-  border: transparent;
+  border: 2px solid transparent;
   background: none;
 }
 
