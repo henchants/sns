@@ -33,6 +33,20 @@ header .logo {
   font-weight: bold;
   
 }
+
+.signup-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .greetings {
   background-image: url(imgs/sns1.jpg);
   background-size: cover;
