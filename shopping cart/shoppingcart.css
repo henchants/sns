@@ -1,0 +1,27 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-items li {
+  margin-bottom: 5px;
+}
+
+.cart-total {
+  font-weight: bold;
+}
