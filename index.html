@@ -3,50 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneaks and Scissors</title>
-<link rel="stylesheet" type="text/css" href="sns.css">
-
+    <title>Sneaks&Scissors</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="sns.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="https://henchants.github.io/sns/sign-up.html">
-                <button class="signup-btn">Sign Up</button>
-            </a>
-            <a href="https://henchants.github.io/sns/">
-                <button>
-                    <img src="imgs/logo.png">
-                </button>
-            </a>
-            <div class="logo">Sneaks and Scissors</div>
-        </div>
-    </header>
-    <section class="greetings">
-        <div class="container">
-            <h1>Welcome to Sneaks and Scissors</h1>
-        </div>
-    </section>
 
-    <section class="two-categ">
-        <div class="categ-flex">
-            <div class="product">
-                <a href="https://henchants.github.io/sns/shoes/shoes.html">
-                    <button>
-                        <img src="imgs/jordans.png" alt="Product 1">
-                    </button>
-                </a>
-                <h2>Sneakers</h2>
+<header>
+    <img id="logo" src="imgs/logo.png">
+    <h1>Sneaks&Scissors</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." id="searchInput">
+        <button onclick="search()">Search</button>
+    </div>
+</header>
+
+<nav>
+    <a href="#" onclick="showTab('barbery')">Barbery</a>
+    <a href="#" onclick="showTab('sneakers')">Sneakers</a>
+    <a href="#" onclick="showTab('apparel')">Apparel</a>
+    <a href="#" onclick="showTab('signup')">Sign Up</a>
+    <div class="cart" onclick="toggleCart()">Cart<span class="cart-items">0</span></div>
+</nav>
+
+<div class="content">
+   <!-- tab ng snearkers -->
+<div id="sneakersTab" class="tab-content show">
+    <h2>Sneakers</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Placeholder para sa products -->
+            <div class="swiper-slide">
+                <img src="shoe images/kobe8.jpg" alt="Sneaker 1">
+                <h3>Kobe 8 Protro</h3>
+                <p>$140</p>
+                <p>Kobe Bryant's eighth signature shoe debuted in 2012. The low-top silhouette features an engineered mesh upper, supported by a full-length Lunarlon midsole for lightweight cushioning. The basketball icon's hand-scrawled signature arrives on the anatomical heel counter.</p>
+                <select id="sneakerSize">
+                    <option value="5">Size 5</option>
+                    <option value="6">Size 6</option>
+                    <option value="7">Size 7</option>
+                    <option value="8">Size 8</option>
+                    <option value="9">Size 9</option>
+                    <option value="10">Size 10</option>
+                </select>
+                <button onclick="addToCart('Kobe 8 Protro', 140, 'sneakerSize')">Add to Cart</button>
             </div>
-            <div class="product">
-                <a href="https://henchants.github.io/sns/barber/barber.html">
-                    <button>
-                        <img src="imgs/barber.jpg" alt="Product 2">
-                    </button>
-                </a>
-                <h2>Haircut</h2>
+            <div class="swiper-slide">
+                <img src="shoe images/kd15.png" alt="Sneaker 2">
+                <h3>KD15</h3>
+                <p>$150</p>
+                <p>The upper on the KD 15 is basically an all mesh upper. The materials on court are very breathable, and super lightweight. They also have a nice, comfortable feel on foot, on court and I had no issues whatsoever with them.</p>
+                <select id="sneakerSize2">
+                    <option value="5">Size 5</option>
+                    <option value="6">Size 6</option>
+                    <option value="7">Size 7</option>
+                    <option value="8">Size 8</option>
+                    <option value="9">Size 9</option>
+                    <option value="10">Size 10</option>
+                </select>
+                <button onclick="addToCart('KD15', 150, 'sneakerSize2')">Add to Cart</button>
+            </div>
+
+            <!-- Add more sneakers products here -->
+            <div class="swiper-slide">
+                <img src="shoe images/J1.jpg" alt="Sneaker 3">
+                <h3>Jordan 1 High OG</h3>
+                <p>$200</p>
+                <p>Classic, original, remastered. Ready to hit the streets with sophistication, this black-and-white AJ1 strikes an elegant balance in premium leather. Refined details, retro branding and a sleek white Swoosh bring it all together.</p>
+                <select id="sneakerSize3">
+                    <option value="5">Size 5</option>
+                    <option value="6">Size 6</option>
+                    <option value="7">Size 7</option>
+                    <option value="8">Size 8</option>
+                    <option value="9">Size 9</option>
+                    <option value="10">Size 10</option>
+                </select>
+                <button onclick="addToCart('Jordan 1 High OG', 200, 'sneakerSize3')">Add to Cart</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="shoe images/vomero5.png" alt="Sneaker 3">
+                <h3>Nike Vomero 5</h3>
+                <p>$180</p>
+                <p>The Vomero 5 takes early 2000s running to modern heights. A combination of breathable and durable materials stands ready for the rigors of your day, while Zoom Air cushioning delivers a smooth ride. Mesh with TecTuff® and utilitarian overlays is breathable and durable..</p>
+                <select id="sneakerSize3">
+                    <option value="5">Size 5</option>
+                    <option value="6">Size 6</option>
+                    <option value="7">Size 7</option>
+                    <option value="8">Size 8</option>
+                    <option value="9">Size 9</option>
+                    <option value="10">Size 10</option>
+                </select>
+                <button onclick="addToCart('Nike Vomero 5', 10, 'sneakerSize3')">Add to Cart</button>
             </div>
         </div>
-    </section>
-    
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<!-- tab for barbery categ -->
+<div id="barberyTab" class="tab-content">
+    <h2>Barbery</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Placeholder ulit ng products -->
+            <div class="swiper-slide">
+                <img src="barbery1.jpg" alt="Barbery 1">
+                <h3>Barbery Razor Pro</h3>
+                <p>$50</p>
+                <select id="barberySize">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <button onclick="addToCart('Barbery Razor Pro', 50, 'barberySize')">Add to Cart</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="barbery2.jpg" alt="Barbery 2">
+                <h3>Barbery Trimmer</h3>
+                <p>$40</p>
+                <select id="barberySize2">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <button onclick="addToCart('Barbery Trimmer', 40, 'barberySize2')">Add to Cart</button>
+            </div>
+            <!-- pewde magdagdag dito ng products -->
+            <div class="swiper-slide">
+                <img src="barbery3.jpg" alt="Barbery 3">
+                <h3>Barbery Shaver</h3>
+                <p>$30</p>
+                <select id="barberySize3">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <button onclick="addToCart('Barbery Shaver', 30, 'barberySize3')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<!-- tab for Apparel(extra nlng daw toh) -->
+<div id="apparelTab" class="tab-content">
+    <h2>Apparel</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Placeholder ulit ng products -->
+            <div class="swiper-slide">
+                <img src="hoodie.jpg" alt="Hoodie">
+                <h3>Hoodie</h3>
+                <p>$40</p>
+                <select id="apparelSize">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <button onclick="addToCart('Hoodie', 40, 'apparelSize')">Add to Cart</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="tshirt.jpg" alt="T-shirt">
+                <h3>T-shirt</h3>
+                <p>$20</p>
+                <select id="apparelSize2">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <button onclick="addToCart('T-shirt', 20, 'apparelSize2')">Add to Cart</button>
+            </div>
+            <!-- dagdag nlng apparel dito -->
+            <div class="swiper-slide">
+                <img src="jacket.jpg" alt="Jacket">
+                <h3>Jacket</h3>
+                <p>$60</p>
+                <select id="apparelSize3">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <button onclick="addToCart('Jacket', 60, 'apparelSize3')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<!-- tab para sa Sign Up(dapat palitan toh ng location) -->
+<div id="signupTab" class="tab-content">
+    <h2>Sign Up</h2>
+    <p>Sign up to receive updates and exclusive offers:</p>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="submitting">
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+</div>
+
+<!-- Cart Tab -->
+<div id="cartTab" class="cart-tab">
+    <h2>Shopping Cart</h2>
+    <div id="cartItems"></div>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Thank you for your purchase!</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Sneaks&Scissors. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // Initializing ng Swiper
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Function to show the active tab content and hide others
+    function showTab(tabName) {
+        var tabs = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabs.length; i++) {
+            if (tabs[i].id === tabName + 'Tab') {
+                tabs[i].classList.add('show');
+            } else {
+                tabs[i].classList.remove('show');
+            }
+        }
+    }
+
+    // Function to toggle the cart tab
+    function toggleCart() {
+        var cartTab = document.getElementById('cartTab');
+        cartTab.classList.toggle('show');
+    }
+
+    // Function to add a product to the cart
+    function addToCart(productName, price, sizeId) {
+        var size = document.getElementById(sizeId).value;
+        var cartItemsDiv = document.getElementById('cartItems');
+        var cartItemsCount = parseInt(document.querySelector('.cart-items').innerText);
+        cartItemsCount++;
+        document.querySelector('.cart-items').innerText = cartItemsCount;
+
+        var cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+            <img src="placeholder.png" alt="${productName}">
+            <p>${productName} - ${size} - $${price}</p>
+            <button onclick="removeFromCart(this)">Remove</button>
+        `;
+        cartItemsDiv.appendChild(cartItem);
+    }
+
+    // Function to remove a product from the cart
+    function removeFromCart(button) {
+        var cartItemsDiv = document.getElementById('cartItems');
+        cartItemsDiv.removeChild(button.parentElement);
+        var cartItemsCount = parseInt(document.querySelector('.cart-items').innerText);
+        cartItemsCount--;
+        document.querySelector('.cart-items').innerText = cartItemsCount;
+    }
+
+    // Function to simulate checkout
+    function checkout() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+        setTimeout(function() {
+            modal.style.display = "none";
+            var cartItemsDiv = document.getElementById('cartItems');
+            cartItemsDiv.innerHTML = '';
+            document.querySelector('.cart-items').innerText = '0';
+            var cartTab = document.getElementById('cartTab');
+            cartTab.classList.remove('show');
+        }, 2000);
+    }
+
+    // Function to handle search
+    function search() {
+        var searchInput = document.getElementById('searchInput').value;
+        alert('Search functionality is not implemented yet. You searched for: ' + searchInput);
+    }
+
+    // Close the modal when the user clicks on <span> (x)
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "none";
+    }
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+        var modal = document.getElementById('myModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 </body>
 </html>
