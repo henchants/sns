@@ -16,13 +16,14 @@
         <input type="text" placeholder="Search..." id="searchInput">
         <button onclick="search()">Search</button>
     </div>
+    <a href="#" onclick="showTab('signup')" class="signup-button">Sign Up</a>
 </header>
 
 <nav>
     <a href="#" onclick="showTab('barbery')">Barbery</a>
     <a href="#" onclick="showTab('sneakers')">Sneakers</a>
     <a href="#" onclick="showTab('apparel')">Apparel</a>
-    <a href="#" onclick="showTab('signup')">Sign Up</a>
+    
     <div class="cart" onclick="toggleCart()">Cart<span class="cart-items">0</span></div>
 </nav>
 
@@ -196,8 +197,8 @@
 <!-- tab para sa Sign Up(dapat palitan toh ng location) -->
 <div id="signupTab" class="tab-content">
     <h2>Sign Up</h2>
-    <p>Sign up to receive updates and exclusive offers:</p>
-    <form action="#" method="post">
+    <p>Sign up to receive updates and exclusive features:</p>
+    <form action="connect.php" method="post">
         <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
@@ -234,7 +235,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2024 Sneaks&Scissors. All rights reserved.</p>
+    <p class="rights">&copy; 2024 Sneaks&Scissors. All rights reserved.</p>
 </footer>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
