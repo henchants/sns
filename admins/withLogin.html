@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Sneaks & Scissors</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="login-container">
+            <h2 class="loginTitle">Admin Login</h2>
+            <form action="admin_authenticate.php" method="post">
+                <div class="form-group">
+                    <label class="loginInfo" for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label class="loginInfo" for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+        <h1>Admin Panel - Sneaks & Scissors</h1>
+        <a href="admin_logout.php" class="logoutButton">Logout</a>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showTab('appointments')">Appointments</a>
+        <a href="#" onclick="showTab('sneakerReservations')">Sneaker Reservations/Orders</a>
+    </nav>
+    
+    <div class="content">
+        <!-- Tab for appointments -->
+        <div id="appointmentsTab" class="tab-content show">
+            <h2>Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Appointments data will be displayed here -->
+                    <tr>
+                        <td>2024-03-12</td>
+                        <td>10:00 AM</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>123-456-7890</td>
+                    </tr>
+                    <!-- Add more appointment rows here -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Tab for sneaker reservations/orders -->
+        <div id="sneakerReservationsTab" class="tab-content">
+            <h2>Sneaker Reservations/Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product Name</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sneaker reservations/orders data will be displayed here -->
+                    <tr>
+                        <td>001</td>
+                        <td>Kobe 8 Protro</td>
+                        <td>Size 9</td>
+                        <td>$140</td>
+                        <td>Reserved</td>
+                    </tr>
+                    <!-- Add more reservation/order rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        // Function to show the active tab content and hide others
+        function showTab(tabName) {
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                if (tabs[i].id === tabName + 'Tab') {
+                    tabs[i].classList.add('show');
+                } else {
+                    tabs[i].classList.remove('show');
+                }
+            }
+        }
+    </script>
+    
+    <footer>
+        <p class="rights">&copy; 2024 Sneaks&Scissors. All rights reserved.</p>
+    </footer>
+
+    </body>
+</html>
