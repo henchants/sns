@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin.css"> 
 </head>
 <body>
 
@@ -29,9 +29,10 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
+                    <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="appointmentsTable">
                 <!-- Appointments data will be displayed here -->
                 <tr>
                     <td>2024-03-12</td>
@@ -39,10 +40,25 @@
                     <td>John Doe</td>
                     <td>john@example.com</td>
                     <td>123-456-7890</td>
+                    <td><button onclick="removeAppointment(this)">Remove</button></td>
                 </tr>
                 <!-- Add more appointment rows here -->
             </tbody>
         </table>
+        <h3>Add New Appointment</h3>
+        <form id="addAppointmentForm" onsubmit="addAppointment(event)">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="contactNumber" name="contactNumber" required>
+            <button type="submit">Add Appointment</button>
+        </form>
     </div>
 
     <!-- Tab for sneaker reservations/orders -->
@@ -84,6 +100,41 @@
                 tabs[i].classList.remove('show');
             }
         }
+    }
+
+    // Function to remove an appointment
+    function removeAppointment(button) {
+        var confirmation = confirm("Are you sure you want to remove this appointment?");
+        if (confirmation) {
+            var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    }
+
+    // Function to add a new appointment
+    function addAppointment(event) {
+        event.preventDefault();
+        var form = document.getElementById('addAppointmentForm');
+        var date = form.elements['date'].value;
+        var time = form.elements['time'].value;
+        var name = form.elements['name'].value;
+        var email = form.elements['email'].value;
+        var contactNumber = form.elements['contactNumber'].value;
+
+        // Append new row to the table
+        var newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${date}</td>
+            <td>${time}</td>
+            <td>${name}</td>
+            <td>${email}</td>
+            <td>${contactNumber}</td>
+            <td><button onclick="removeAppointment(this)">Remove</button></td>
+        `;
+        document.getElementById('appointmentsTable').appendChild(newRow);
+
+        // Reset form fields
+        form.reset();
     }
 </script>
 
