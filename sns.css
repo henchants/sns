@@ -25,6 +25,15 @@ header {
   
 }
 
+/* Image Styles for Barbery Section */
+#barberyTab .swiper-slide img {
+  width: 200px; /* Set the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add border radius */
+  margin-bottom: 10px; /* Add margin to separate images */
+}
+
+
 .search-bar {
   display: flex;
   justify-content: right;
