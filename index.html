@@ -103,6 +103,7 @@
 </div>
 
 <!-- tab for barbery categ -->
+<!-- tab for barbery categ -->
 <div id="barberyTab" class="tab-content">
     <h2>Barbery</h2>
     <div class="swiper-container">
@@ -117,7 +118,7 @@
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <button onclick="addToCart('Undercut', 250, 'barberySize1')">Add to Cart</button>
+                <button onclick="setAppointment('Undercut', 250)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/crew.jpg" alt="Barbery 2">
@@ -128,7 +129,7 @@
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <button onclick="addToCart('Crew Cut', 200, 'barberySize2')">Add to Cart</button>
+                <button onclick="setAppointment('Crew Cut', 200)">Set Appointment</button>
             </div>
             <!-- pewde magdagdag dito ng products -->
             <div class="swiper-slide">
@@ -140,7 +141,7 @@
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <button onclick="addToCart('Pompadour', 300, 'barberySize3')">Add to Cart</button>
+                <button onclick="setAppointment('Pompadour', 300)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/buzz.avif" alt="Barbery 4">
@@ -151,7 +152,7 @@
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <button onclick="addToCart('Buzz Cut', 180, 'barberySize4')">Add to Cart</button>
+                <button onclick="setAppointment('Buzz Cut', 180)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/fade1.jpg" alt="Fade 1">
@@ -162,7 +163,7 @@
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <button onclick="addToCart('Low Fade', 270, 'barberySize7')">Add to Cart</button>
+                <button onclick="setAppointment('Low Fade', 270)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/fade2.jpg" alt="Fade 2">
@@ -173,13 +174,24 @@
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <button onclick="addToCart('High Fade', 290, 'barberySize8')">Add to Cart</button>
+                <button onclick="setAppointment('High Fade', 290)">Set Appointment</button>
             </div>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
 </div>
+
+<script>
+// Function to set an appointment
+function setAppointment(serviceName, price) {
+    var appointmentTime = prompt("Please enter your preferred appointment time:");
+    if (appointmentTime) {
+        alert("Appointment set for " + serviceName + " at " + appointmentTime + ". Total price: ₱" + price);
+    }
+}
+</script>
+
 
 
 
