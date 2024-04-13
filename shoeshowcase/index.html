@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaks&Scissors</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="shoe.css">
+</head>
+<body>
+
+<header>
+    <img id="logo" src="imgs/logo.png">
+    <h1>Sneaks & Scissors</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." id="searchInput">
+        <button onclick="search()">Search</button>
+    </div>
+    <a href="#" onclick="showTab('signup')" class="signup-button">Sign Up</a>
+</header>
+
+<nav>
+    <a href="#" onclick="showTab('barbery')">Barbery</a>
+    <a href="#" onclick="showTab('sneakers')">Sneakers</a>
+    <!--<a href="#" onclick="showTab('apparel')">Apparel</a>-->
+    
+    <div class="cart" onclick="toggleCart()">Cart<span class="cart-items">0</span></div>
+</nav>
+
+<div class="content">
+    <div class="shoe-gallery">
+        <div class="shoe-images">
+            <img src="shoe images/kobe8.jpg" alt="Sneaker 1">
+            <img src="shoe images/kobe8_2.jpg" alt="Sneaker 1">
+            <img src="shoe images/kobe8_3.jpg" alt="Sneaker 1">
+        </div>
+        <div class="shoe-description">
+            <h2>Kobe 8 Protro</h2>
+            <p>$140</p>
+            <p>Kobe Bryant's eighth signature shoe debuted in 2012. The low-top silhouette features an engineered mesh upper, supported by a full-length Lunarlon midsole for lightweight cushioning. The basketball icon's hand-scrawled signature arrives on the anatomical heel counter.</p>
+            <select id="sneakerSize">
+                <option value="5">Size 5</option>
+                <option value="6">Size 6</option>
+                <option value="7">Size 7</option>
+                <option value="8">Size 8</option>
+                <option value="9">Size 9</option>
+                <option value="10">Size 10</option>
+            </select>
+            <button onclick="addToCart('Kobe 8 Protro', 140, 'sneakerSize')">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Tab -->
+<div id="cartTab" class="cart-tab">
+    <h2>Shopping Cart</h2>
+    <div id="cartItems"></div>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+</div>
+
+<!-- Signup Tab -->
+<div id="signupTab" class="tab-content">
+    <h2>Sign Up</h2>
+    <form id="signupForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Thank you for your purchase!</p>
+    </div>
+</div>
+
+<footer>
+    <p class="rights">&copy; 2024 Sneaks&Scissors. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    
+    // Cart variables
+    var cartItems = [];
+    var cartCount = 0;
+
+    // Function to show the active tab content and hide others
+    function showTab(tabName) {
+        var tabs = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabs.length; i++) {
+            if (tabs[i].id === tabName + 'Tab') {
+                tabs[i].classList.add('show');
+            } else {
+                tabs[i].classList.remove('show');
+            }
+        }
+    }
+
+    // Function to toggle the cart tab
+    function toggleCart() {
+        var cartTab = document.getElementById('cartTab');
+        cartTab.classList.toggle('show');
+    }
+
+    // Function to add a product to the cart
+    function addToCart(productName, price, sizeId) {
+        var size = document.getElementById(sizeId).value;
+        var item = { productName: productName, price: price, size: size };
+        cartItems.push(item);
+        renderCart();
+    }
+
+    // Function to remove a product from the cart
+    function removeFromCart(index) {
+        cartItems.splice(index, 1);
+        renderCart();
+    }
+
+    // Function to render the cart
+    function renderCart() {
+        var cartItemsDiv = document.getElementById('cartItems');
+        cartItemsDiv.innerHTML = '';
+        cartCount = 0;
+        cartItems.forEach(function(item, index) {
+            cartCount++;
+            var cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <img src="placeholder.png" alt="${item.productName}">
+                <p>${item.productName} - ${item.size} - $${item.price}</p>
+                <button onclick="removeFromCart(${index})">Remove</button>
+            `;
+            cartItemsDiv.appendChild(cartItem);
+        });
+        document.querySelector('.cart-items').innerText = cartCount;
+    }
+
+    // Function to simulate checkout
+    function checkout() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+        setTimeout(function() {
+            modal.style.display = "none";
+            cartItems = [];
+            renderCart();
+            var cartTab = document.getElementById('cartTab');
+            cartTab.classList.remove('show');
+        }, 2000);
+    }
+
+    // Function to handle search
+    function search() {
+        var searchInput = document.getElementById('searchInput').value;
+        alert('Search functionality is not implemented yet. You searched for: ' + searchInput);
+    }
+
+    // Function to validate signup form
+    function validateForm() {
+        // You can implement validation logic here
+        // For now, it returns true to submit the form
+        return true;
+    }
+
+    // Close the modal when the user clicks on <span> (x)
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "none";
+    }
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+        var modal = document.getElementById('myModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
