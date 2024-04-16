@@ -233,6 +233,17 @@ nav a:hover {
   z-index: 10;
 }
 
+/* Hide the cart tab by default */
+.cart-tab {
+  display: none;
+}
+
+/* Styles for the shopping cart */
+.cart-tab.show {
+  display: block;
+}
+
+
 .signup-button {
   background-color: #333;
   color: #fff;
