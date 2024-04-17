@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneaks&Scissors</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="sns.css">
+    <link rel="stylesheet" href="SNS/sns.css">
 </head>
 <body>
 
 <header>
-    <img id="logo" src="imgs/logo.png">
+    <img id="logo" src="SNS/imgs/logo.png">
     <h1>Sneaks & Scissors</h1>
     <div class="search-bar">
         <input type="text" placeholder="Search..." id="searchInput">
@@ -36,7 +36,7 @@
             <!-- Placeholder para sa products -->
             <div class="swiper-slide">
                 <a href="https://henchants.github.io/sns/shoeshowcase/">
-                <img src="shoe images/kobe8.jpg" alt="Sneaker 1"></a>
+                <img src="SNS/shoe images/kobe8.jpg" alt="Sneaker 1"></a>
                 <a href="https://henchants.github.io/sns/shoeshowcase/"><h3>Kobe 8 Protro</h3></a>
                 <p>P7500</p>
                 <p>Kobe Bryant's eighth signature shoe debuted in 2012. The low-top silhouette features an engineered mesh upper, supported by a full-length Lunarlon midsole for lightweight cushioning. The basketball icon's hand-scrawled signature arrives on the anatomical heel counter.</p>
@@ -52,7 +52,7 @@
             </div>
             <div class="swiper-slide">
                 <a href="https://henchants.github.io/sns/shoeshowcase/">
-                <img src="shoe images/kd15.png" alt="Sneaker 2"></a>
+                <img src="SNS/shoe images/kd15.png" alt="Sneaker 2"></a>
                 <a href="https://henchants.github.io/sns/shoeshowcase/"><h3>KD15</h3></a>
                 <p>P7790</p>
                 <p>The upper on the KD 15 is basically an all mesh upper. The materials on court are very breathable, and super lightweight. They also have a nice, comfortable feel on foot, on court and I had no issues whatsoever with them.</p>
@@ -70,7 +70,7 @@
             <!-- Add more sneakers products here -->
             <div class="swiper-slide">
                 <a href="https://henchants.github.io/sns/shoeshowcase/">
-                <img src="shoe images/J1.jpg" alt="Sneaker 3"></a>
+                <img src="SNS/shoe images/J1.jpg" alt="Sneaker 3"></a>
                 <a href="https://henchants.github.io/sns/shoeshowcase/">h3>Jordan 1 High OG</h3></a>
                 <p>P10,000</p>
                 <p>Classic, original, remastered. Ready to hit the streets with sophistication, this black-and-white AJ1 strikes an elegant balance in premium leather. Refined details, retro branding and a sleek white Swoosh bring it all together.</p>
@@ -86,7 +86,7 @@
             </div>
             <div class="swiper-slide">
                 <a href="https://henchants.github.io/sns/shoeshowcase/">
-                <img src="shoe images/vomero5.png" alt="Sneaker 3"></a>
+                <img src="SNS/shoe images/vomero5.png" alt="Sneaker 3"></a>
                 <a href="https://henchants.github.io/sns/shoeshowcase/"><h3>Nike Vomero 5</h3></a>
                 <p>P9000</p>
                 <p>The Vomero 5 takes early 2000s running to modern heights. A combination of breathable and durable materials stands ready for the rigors of your day, while Zoom Air cushioning delivers a smooth ride. Mesh with TecTuff® and utilitarian overlays is breathable and durable..</p>
@@ -114,7 +114,7 @@
         <div class="swiper-wrapper">
             <!-- Placeholder ulit ng products -->
             <div class="swiper-slide">
-                <img src="haircuts/under.webp" alt="Barbery 1">
+                <img src="SNS/haircuts/under.webp" alt="Barbery 1">
                 <h3>Undercut</h3>
                 <p>₱250</p>
                 <select id="barberySize1">
@@ -125,7 +125,7 @@
                 <button onclick="setAppointment('Undercut', 250)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
-                <img src="haircuts/crew.jpg" alt="Barbery 2">
+                <img src="SNS/haircuts/crew.jpg" alt="Barbery 2">
                 <h3>Crew Cut</h3>
                 <p>₱200</p>
                 <select id="barberySize2">
@@ -137,7 +137,7 @@
             </div>
             <!-- pewde magdagdag dito ng products -->
             <div class="swiper-slide">
-                <img src="haircuts/pomp.jpg" alt="Barbery 3">
+                <img src="SNS/haircuts/pomp.jpg" alt="Barbery 3">
                 <h3>Pompadour</h3>
                 <p>₱300</p>
                 <select id="barberySize3">
@@ -148,7 +148,7 @@
                 <button onclick="setAppointment('Pompadour', 300)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
-                <img src="haircuts/buzz.avif" alt="Barbery 4">
+                <img src="SNS/haircuts/buzz.avif" alt="Barbery 4">
                 <h3>Buzz Cut</h3>
                 <p>₱180</p>
                 <select id="barberySize4">
@@ -159,7 +159,7 @@
                 <button onclick="setAppointment('Buzz Cut', 180)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
-                <img src="haircuts/fade1.jpg" alt="Fade 1">
+                <img src="SNS/haircuts/fade1.jpg" alt="Fade 1">
                 <h3>Low Fade</h3>
                 <p>₱270</p>
                 <select id="barberySize7">
@@ -170,7 +170,7 @@
                 <button onclick="setAppointment('Low Fade', 270)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
-                <img src="haircuts/fade2.jpg" alt="Fade 2">
+                <img src="SNS/haircuts/fade2.jpg" alt="Fade 2">
                 <h3>High Fade</h3>
                 <p>₱290</p>
                 <select id="barberySize8">
@@ -330,7 +330,7 @@ function setAppointment(serviceName, price) {
         var cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
         cartItem.innerHTML = `
-            <img src="placeholder.png" alt="${productName}">
+            <img src="SNS/placeholder.png" alt="${productName}">
             <p>${productName} - ${size} - $${price}</p>
             <button onclick="removeFromCart(this)">Remove</button>
         `;
