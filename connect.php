@@ -1,5 +1,5 @@
 <?php
-    $servername = "localhost"
+    $servername = "localhost";
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
