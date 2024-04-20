@@ -117,22 +117,14 @@
                 <img src="haircuts/under.webp" alt="Barbery 1">
                 <h3>Undercut</h3>
                 <p>₱250</p>
-                <select id="barberySize1">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
+                
                 <button onclick="setAppointment('Undercut', 250)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/crew.jpg" alt="Barbery 2">
                 <h3>Crew Cut</h3>
                 <p>₱200</p>
-                <select id="barberySize2">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
+
                 <button onclick="setAppointment('Crew Cut', 200)">Set Appointment</button>
             </div>
             <!-- pewde magdagdag dito ng products -->
@@ -140,44 +132,28 @@
                 <img src="haircuts/pomp.jpg" alt="Barbery 3">
                 <h3>Pompadour</h3>
                 <p>₱300</p>
-                <select id="barberySize3">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
+                
                 <button onclick="setAppointment('Pompadour', 300)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/buzz.avif" alt="Barbery 4">
                 <h3>Buzz Cut</h3>
                 <p>₱180</p>
-                <select id="barberySize4">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
+                
                 <button onclick="setAppointment('Buzz Cut', 180)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/fade1.jpg" alt="Fade 1">
                 <h3>Low Fade</h3>
                 <p>₱270</p>
-                <select id="barberySize7">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
+                
                 <button onclick="setAppointment('Low Fade', 270)">Set Appointment</button>
             </div>
             <div class="swiper-slide">
                 <img src="haircuts/fade2.jpg" alt="Fade 2">
                 <h3>High Fade</h3>
                 <p>₱290</p>
-                <select id="barberySize8">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
+                
                 <button onclick="setAppointment('High Fade', 290)">Set Appointment</button>
             </div>
         </div>
@@ -288,6 +264,38 @@ function setAppointment(serviceName, price) {
 <footer>
     <p class="rights">&copy; 2024 Sneaks&Scissors. All rights reserved.</p>
 </footer>
+
+<script>
+    function addAppointment(event) {
+        event.preventDefault();
+        var form = document.getElementById('addAppointmentForm');
+        var date = form.elements['date'].value;
+        var time = form.elements['time'].value;
+        var name = form.elements['name'].value;
+        var email = form.elements['email'].value;
+        var contactNumber = form.elements['contactNumber'].value;
+
+        // Send appointment data to the server using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'add_appointment.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Appointment added successfully, do something if needed
+                } else {
+                    // Error handling
+                    console.error('Error adding appointment');
+                }
+            }
+        };
+        xhr.send('date=' + encodeURIComponent(date) +
+                 '&time=' + encodeURIComponent(time) +
+                 '&name=' + encodeURIComponent(name) +
+                 '&email=' + encodeURIComponent(email) +
+                 '&contactNumber=' + encodeURIComponent(contactNumber));
+    }
+</script>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
